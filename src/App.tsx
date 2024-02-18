@@ -5,7 +5,8 @@ import QuestionCard from "./components/QuestionCard";
 // types
 import { QuestionState, fetchQuizQuestions, Diffculty } from "./API";
 //styles
-import { GlobalStyle ,Wrapper} from "./App.styles";
+import { GlobalStyle, Wrapper } from "./App.styles";
+import UserAnswers from "./components/UserAnswers";
 
 const TOTAL_QUESTIONS = 10;
 
@@ -84,6 +85,9 @@ function App() {
           <button className="next" onClick={nextQuestion}>
             Next Question
           </button>
+        )}
+        {gameOver && userAnswers.length === TOTAL_QUESTIONS && (
+          <UserAnswers userAnswer={userAnswers} />
         )}
       </Wrapper>
     </>

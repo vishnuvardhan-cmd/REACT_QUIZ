@@ -1,5 +1,5 @@
 import { shuffleArray } from "./utils";
-
+import { answerObj } from "./App";
 export enum Diffculty {
   EASY = "easy",
   MEDIUM = "medium",
@@ -28,3 +28,8 @@ export const fetchQuizQuestions = async (
     answers: shuffleArray([obj.correct_answer, ...obj.incorrect_answers]),
   }));
 };
+
+
+export type obj={
+  userAnswer:answerObj[]
+}
