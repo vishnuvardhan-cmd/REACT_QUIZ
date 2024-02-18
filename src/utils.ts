@@ -1,0 +1,1 @@
+export const shuffleArray=(val:any[])=>[...val].sort(()=>Math.random()-0.5);
